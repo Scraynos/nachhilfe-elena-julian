@@ -6,7 +6,6 @@
 <title>Elena & Julian · Nachhilfe – von der Mittelstufe bis zum Abitur</title>
 <meta name="description" content="Persönliche Online-Nachhilfe von zwei Medizinstudenten mit 1,0er Abitur. Mathematik, Latein, Deutsch & mehr – von der Mittelstufe bis zum Abitur-Leistungskurs.">
 
-<!-- Fonts: Fraunces (Display-Serif mit Charakter) + Hanken Grotesk (klarer Body) -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -31,18 +30,8 @@
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:90px}
-body{
-  font-family:var(--sans);
-  background:var(--bg);
-  color:var(--ink);
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  overflow-x:hidden;
-}
-body::before{
-  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E");
-}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.035'/%3E%3C/svg%3E")}
 .wrap{max-width:1140px;margin:0 auto;padding:0 26px;position:relative;z-index:1}
 h1,h2,h3,h4{font-family:var(--serif);font-weight:600;line-height:1.1;letter-spacing:-.01em}
 a{color:inherit;text-decoration:none}
@@ -79,6 +68,7 @@ nav{display:flex;align-items:center;justify-content:space-between;padding:18px 2
 
 .hero-visual{position:relative}
 .hero-photo{border-radius:26px;overflow:hidden;box-shadow:var(--shadow);aspect-ratio:4/5;position:relative}
+.hero-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .hero-badge{position:absolute;bottom:-22px;left:-22px;background:var(--primary);color:#fff;border-radius:18px;padding:18px 22px;box-shadow:var(--shadow);max-width:200px}
 .hero-badge .big{font-family:var(--serif);font-size:2.1rem;font-weight:600;line-height:1}
 .hero-badge .small{font-size:.82rem;opacity:.85;margin-top:4px}
@@ -105,13 +95,15 @@ section{padding:96px 0;position:relative;z-index:1}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:10px}
 .tutor-card{background:var(--card);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-soft);border:1px solid var(--line);transition:transform .3s,box-shadow .3s}
 .tutor-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
-.tutor-photo{aspect-ratio:1/1;width:100%}
+.tutor-photo{aspect-ratio:1/1;width:100%;overflow:hidden}
+.tutor-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .tutor-body{padding:24px 26px 28px}
 .tutor-body h3{font-size:1.5rem;color:var(--primary-deep)}
 .tutor-role{color:var(--accent);font-weight:600;font-size:.9rem;margin:2px 0 12px}
 .tutor-body p{color:var(--ink-soft);font-size:.98rem}
 .tutor-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
 .tutor-tags span{background:rgba(30,74,63,.07);font-size:.8rem;font-weight:600;padding:.35em .8em;border-radius:100px;color:var(--primary-deep)}
+.tutor-tags span.special{background:var(--accent);color:#fff}
 .about-intro{background:var(--bg-warm);border-radius:var(--radius);padding:34px 38px;margin-bottom:34px;border:1px solid var(--line)}
 .about-intro p{font-size:1.15rem;color:var(--ink-soft);max-width:62ch}
 .about-intro strong{color:var(--primary-deep);font-weight:700}
@@ -163,7 +155,8 @@ section{padding:96px 0;position:relative;z-index:1}
 .ferien-text{padding:44px 46px}
 .ferien-text h2{font-size:clamp(1.8rem,3.5vw,2.5rem);color:var(--primary-deep);margin:14px 0 16px}
 .ferien-text p{color:var(--ink-soft);font-size:1.06rem;margin-bottom:14px}
-.ferien-photo{aspect-ratio:1/1;height:100%;min-height:320px}
+.ferien-photo{aspect-ratio:1/1;height:100%;min-height:320px;overflow:hidden}
+.ferien-photo img{width:100%;height:100%;object-fit:cover;display:block}
 .tag-line{display:inline-block;font-family:var(--serif);font-style:italic;font-size:1.2rem;color:var(--accent);margin-top:6px}
 
 #stimmen{background:var(--bg-warm)}
@@ -181,10 +174,14 @@ section{padding:96px 0;position:relative;z-index:1}
 .contact-info h2{font-size:clamp(2rem,4vw,2.9rem);color:var(--primary-deep);margin:14px 0 18px}
 .contact-info p{color:var(--ink-soft);font-size:1.08rem;margin-bottom:28px;max-width:42ch}
 .contact-methods{display:flex;flex-direction:column;gap:14px}
-.cm{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 20px;transition:transform .2s,box-shadow .2s}
+.cm{display:flex;align-items:center;gap:16px;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:16px 20px;transition:transform .2s,box-shadow .2s;position:relative}
 .cm:hover{transform:translateX(4px);box-shadow:var(--shadow-soft)}
+.cm.preferred{border-color:var(--accent);background:linear-gradient(to right,rgba(197,106,44,.06),transparent)}
+.cm .badge{position:absolute;top:-9px;right:14px;background:var(--accent);color:#fff;font-size:.66rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:.25em .7em;border-radius:100px}
 .cm .cm-ico{width:46px;height:46px;border-radius:12px;background:rgba(30,74,63,.08);display:grid;place-items:center;flex-shrink:0}
 .cm .cm-ico svg{width:22px;height:22px;color:var(--primary)}
+.cm.preferred .cm-ico{background:rgba(37,211,102,.12)}
+.cm.preferred .cm-ico svg{color:#1AAE52}
 .cm b{display:block;color:var(--primary-deep);font-size:1.02rem}
 .cm small{color:var(--ink-soft)}
 .contact-form{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:34px 36px;box-shadow:var(--shadow-soft)}
@@ -236,7 +233,6 @@ footer a:hover{color:var(--accent-soft)}
 </head>
 <body>
 
-<!-- ================= NAV ================= -->
 <header id="head">
   <nav>
     <a href="#top" class="logo"><span class="mark">EJ</span> Elena&nbsp;&amp;&nbsp;Julian</a>
@@ -257,7 +253,6 @@ footer a:hover{color:var(--accent-soft)}
 
 <span id="top"></span>
 
-<!-- ================= HERO ================= -->
 <section class="hero">
   <div class="wrap hero-grid">
     <div class="hero-text reveal">
@@ -270,18 +265,14 @@ footer a:hover{color:var(--accent-soft)}
       </div>
       <div class="chips">
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> 1,0er Abitur</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Top 0,1 % Medizinertest</span>
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> 4+ Jahre Erfahrung</span>
-        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Medizinstudenten</span>
       </div>
     </div>
 
     <div class="hero-visual reveal">
-      <!-- PLATZHALTER: Hauptbild (z. B. ihr beide / Lernsituation). Format hochkant 4:5 -->
-      <div class="hero-photo ph">
-        <div class="ph-inner">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></svg>
-          <span>Foto einfügen · ihr beide (hochkant)</span>
-        </div>
+      <div class="hero-photo">
+        <img src="images/main.JPG" alt="Elena und Julian – Nachhilfe">
       </div>
       <div class="hero-badge">
         <div class="big">100%</div>
@@ -292,17 +283,15 @@ footer a:hover{color:var(--accent-soft)}
   </div>
 </section>
 
-<!-- ================= STATS ================= -->
 <div class="stats">
   <div class="wrap stats-grid reveal">
     <div class="stat"><div class="num">1,0</div><div class="lbl">Abiturdurchschnitt</div></div>
+    <div class="stat"><div class="num">0,1 %</div><div class="lbl">Top im Medizinertest</div></div>
     <div class="stat"><div class="num">4+</div><div class="lbl">Jahre Erfahrung</div></div>
-    <div class="stat"><div class="num">8+</div><div class="lbl">Fächer im Angebot</div></div>
     <div class="stat"><div class="num">0&nbsp;€</div><div class="lbl">Kennenlern&shy;gespräch</div></div>
   </div>
 </div>
 
-<!-- ================= ÜBER UNS ================= -->
 <section id="ueber">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -311,40 +300,33 @@ footer a:hover{color:var(--accent-soft)}
     </div>
 
     <div class="about-intro reveal">
-      <p>Wir sind <strong>Elena und Julian</strong> – beide Medizinstudenten und seit über <strong>vier Jahren</strong> als Nachhilfelehrer aktiv, davon drei Jahre intensiv. Unser Abitur haben wir mit einem Schnitt von <strong>1,0</strong> abgeschlossen. Genauso wichtig wie gute Noten ist uns aber, dass unsere Schüler:innen den Stoff wirklich verstehen – in einer Atmosphäre, in der jede Frage erlaubt ist.</p>
+      <p>Wir sind <strong>Elena und Julian</strong> – beide Medizinstudenten und seit über <strong>vier Jahren</strong> als Nachhilfelehrer aktiv, davon drei Jahre intensiv. Unser Abitur haben wir mit einem Schnitt von <strong>1,0</strong> abgeschlossen; Julian zusätzlich mit einem Ergebnis unter den <strong>besten 0,1 % im Medizinertest (TMS)</strong>. Genauso wichtig wie gute Noten ist uns aber, dass unsere Schüler:innen den Stoff wirklich verstehen – in einer Atmosphäre, in der jede Frage erlaubt ist.</p>
     </div>
 
     <div class="about-grid">
       <div class="tutor-card reveal">
-        <!-- PLATZHALTER: Foto Elena (quadratisch) -->
-        <div class="tutor-photo ph"><div class="ph-inner">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-          <span>Foto Elena</span></div></div>
+        <div class="tutor-photo"><img src="images/elena.png" alt="Elena"></div>
         <div class="tutor-body">
           <h3>Elena</h3>
-          <div class="tutor-role">Medizinstudentin · 1,0er Abitur</div>
-          <p>Begleitet ihre Schüler:innen mit viel Geduld und einem klaren Blick fürs Wesentliche – besonders in den Sprachen.</p>
+          <div class="tutor-role">Medizinstudentin · Deutsch &amp; Latein LK im Abitur</div>
+          <p>Begleitet ihre Schüler:innen mit viel Geduld und Strukturgefühl – besonders in den Sprachen.</p>
           <div class="tutor-tags"><span>Latein</span><span>Deutsch</span><span>Englisch</span><span>Biologie</span></div>
         </div>
       </div>
 
       <div class="tutor-card reveal">
-        <!-- PLATZHALTER: Foto Julian (quadratisch) -->
-        <div class="tutor-photo ph"><div class="ph-inner">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
-          <span>Foto Julian</span></div></div>
+        <div class="tutor-photo"><img src="images/julian.PNG" alt="Julian"></div>
         <div class="tutor-body">
           <h3>Julian</h3>
-          <div class="tutor-role">Medizinstudent · 1,0er Abitur</div>
-          <p>Erklärt auch knifflige Themen so lange, bis es wirklich „klick" macht – mit Schwerpunkt auf Mathematik und Latein.</p>
-          <div class="tutor-tags"><span>Mathematik</span><span>Latein</span><span>Physik</span><span>Biologie</span></div>
+          <div class="tutor-role">Medizinstudent · Mathe &amp; Biologie LK im Abitur</div>
+          <p>Erklärt auch knifflige Themen so lange, bis es wirklich „klick" macht – mit Schwerpunkt auf Mathematik und den Naturwissenschaften.</p>
+          <div class="tutor-tags"><span class="special">Top 0,1 % Medizinertest</span><span>Mathematik</span><span>Biologie</span><span>Physik</span><span>Latein</span></div>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ================= FÄCHER ================= -->
 <section id="faecher">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -353,18 +335,18 @@ footer a:hover{color:var(--accent-soft)}
       <p>Von der Mittelstufe bis zum Abitur – inklusive Leistungskurs.</p>
     </div>
     <div class="subj-grid">
-      <div class="subj reveal"><div class="ico">📐</div><div><h4>Mathematik</h4><small>bis Abitur · inkl. LK</small></div></div>
-      <div class="subj reveal"><div class="ico">📜</div><div><h4>Latein</h4><small>bis Abitur · inkl. LK</small></div></div>
-      <div class="subj reveal"><div class="ico">✍️</div><div><h4>Deutsch</h4><small>bis Abitur · inkl. LK</small></div></div>
-      <div class="subj reveal"><div class="ico">🧬</div><div><h4>Biologie</h4><small>bis Abitur</small></div></div>
+      <div class="subj reveal"><div class="ico">📐</div><div><h4>Mathematik</h4><small>LK bis Abitur</small></div></div>
+      <div class="subj reveal"><div class="ico">✍️</div><div><h4>Deutsch</h4><small>LK bis Abitur</small></div></div>
+      <div class="subj reveal"><div class="ico">📜</div><div><h4>Latein</h4><small>LK bis Abitur</small></div></div>
+      <div class="subj reveal"><div class="ico">🧬</div><div><h4>Biologie</h4><small>LK bis Abitur</small></div></div>
+      <div class="subj reveal"><div class="ico">⚛️</div><div><h4>Physik</h4><small>GK bis Sek II</small></div></div>
       <div class="subj reveal"><div class="ico">🇬🇧</div><div><h4>Englisch</h4><small>bis Abitur</small></div></div>
-      <div class="subj reveal"><div class="ico">⚛️</div><div><h4>Physik</h4><small>bis Abitur</small></div></div>
+      <div class="subj reveal"><div class="ico">⚗️</div><div><h4>Chemie</h4><small>bis Klasse 8</small></div></div>
       <div class="subj more reveal">+ weitere Fächer auf Anfrage</div>
     </div>
   </div>
 </section>
 
-<!-- ================= ABLAUF ================= -->
 <section id="ablauf">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -374,16 +356,15 @@ footer a:hover{color:var(--accent-soft)}
     </div>
     <div class="steps">
       <div class="step reveal"><div class="n">1</div><h4>Persönliches Kennenlernen</h4><p>Zu Beginn telefonieren wir einmal in Ruhe, um Ziele, Wünsche und den genauen Ablauf zu klären – ganz unverbindlich.</p></div>
-      <div class="step reveal"><div class="n">2</div><h4>Vor- & Nachbereitung</h4><p>Jede Stunde wird sorgfältig vorbereitet und nachbereitet. So sitzt jede Minute und der Stoff baut sinnvoll aufeinander auf.</p></div>
+      <div class="step reveal"><div class="n">2</div><h4>Vor- &amp; Nachbereitung</h4><p>Jede Stunde wird sorgfältig vorbereitet und nachbereitet. So sitzt jede Minute und der Stoff baut sinnvoll aufeinander auf.</p></div>
       <div class="step reveal"><div class="n">3</div><h4>Jederzeit erreichbar</h4><p>Kommt zwischendurch eine Frage auf? Schreibt uns einfach – wir helfen auch außerhalb der Stunden gerne weiter.</p></div>
-      <div class="step reveal"><div class="n">4</div><h4>Korrektur & Kontrolle</h4><p>Wir korrigieren gerne Texte, gehen Übungsaufgaben durch und geben gezieltes Feedback zum aktuellen Thema.</p></div>
+      <div class="step reveal"><div class="n">4</div><h4>Korrektur &amp; Kontrolle</h4><p>Wir korrigieren gerne Texte, gehen Übungsaufgaben durch und geben gezieltes Feedback zum aktuellen Thema.</p></div>
       <div class="step reveal"><div class="n">5</div><h4>Hausaufgaben mit Sinn</h4><p>Passend zum behandelten Stoff geben wir kleine Aufgaben mit – damit das Gelernte wirklich hängen bleibt.</p></div>
-      <div class="step reveal"><div class="n">6</div><h4>Flexibel & ohne Bindung</h4><p>Keine Vertragslaufzeiten, keine versteckten Kosten. Ihr bucht so, wie es zu eurem Alltag passt.</p></div>
+      <div class="step reveal"><div class="n">6</div><h4>Flexibel &amp; ohne Bindung</h4><p>Keine Vertragslaufzeiten, keine versteckten Kosten. Ihr bucht so, wie es zu eurem Alltag passt.</p></div>
     </div>
   </div>
 </section>
 
-<!-- ================= PREISE ================= -->
 <section id="preise">
   <div class="wrap">
     <div class="sec-head center reveal">
@@ -421,7 +402,7 @@ footer a:hover{color:var(--accent-soft)}
     </div>
 
     <div class="price-notes reveal">
-      <span class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Online & Präsenz</span>
+      <span class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Online &amp; Präsenz</span>
       <span class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Ferienkurse ohne Aufpreis</span>
       <span class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Keine Vertragslaufzeit</span>
       <span class="n"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Kennenlernen kostenlos</span>
@@ -429,7 +410,6 @@ footer a:hover{color:var(--accent-soft)}
   </div>
 </section>
 
-<!-- ================= FERIENKURSE ================= -->
 <section>
   <div class="wrap">
     <div class="ferien reveal">
@@ -440,15 +420,11 @@ footer a:hover{color:var(--accent-soft)}
         <p>Ob ein paar Stunden zur Wiederholung oder ein intensiver Kurs: Wir passen uns euren Wünschen und Terminen an.</p>
         <span class="tag-line">„Es ist nie zu spät anzufangen."</span>
       </div>
-      <!-- PLATZHALTER: Bild Ferienkurs / Lernen am Laptop -->
-      <div class="ferien-photo ph"><div class="ph-inner">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.1-3.1a2 2 0 0 0-2.8 0L6 21"/></svg>
-        <span>Bild einfügen</span></div></div>
+      <div class="ferien-photo"><img src="images/extra.jpg" alt="Ferienkurse"></div>
     </div>
   </div>
 </section>
 
-<!-- ================= STIMMEN ================= -->
 <section id="stimmen">
   <div class="wrap">
     <div class="sec-head center reveal">
@@ -456,7 +432,7 @@ footer a:hover{color:var(--accent-soft)}
       <h2>Was andere sagen</h2>
       <p>Echte Rückmeldungen von Schüler:innen und Eltern.</p>
     </div>
-    <!-- PLATZHALTER: echte Zitate eintragen. Beispieltexte unten ersetzen. -->
+    <!-- PLATZHALTER: echte Zitate einfügen -->
     <div class="quotes">
       <div class="quote reveal">
         <div class="stars">★★★★★</div>
@@ -477,27 +453,26 @@ footer a:hover{color:var(--accent-soft)}
   </div>
 </section>
 
-<!-- ================= KONTAKT ================= -->
 <section id="kontakt">
   <div class="wrap">
     <div class="contact-grid">
       <div class="contact-info reveal">
         <span class="eyebrow">Kontakt</span>
         <h2>Lass uns kennenlernen</h2>
-        <p>Am besten sprechen wir einmal kurz telefonisch, damit wir in Ruhe erklären können, wie alles abläuft – und schauen, ob es passt. Das Kennenlernen ist unverbindlich und kostenlos.</p>
+        <p>Am schnellsten erreichst du uns über <strong>WhatsApp</strong>. Vor dem ersten Unterricht telefonieren wir einmal in Ruhe, damit wir alles besprechen können – unverbindlich und kostenlos.</p>
         <div class="contact-methods">
-          <!-- PLATZHALTER: Telefonnummer / WhatsApp / E-Mail eintragen -->
-          <a class="cm" href="tel:+49XXXXXXXXXX">
-            <span class="cm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
-            <div><b>Anrufen</b><small>+49&nbsp;XXX&nbsp;XXXXXXX</small></div>
-          </a>
-          <a class="cm" href="https://wa.me/49XXXXXXXXXX" target="_blank" rel="noopener">
+          <a class="cm preferred" href="https://wa.me/4915259367385" target="_blank" rel="noopener">
+            <span class="badge">Bevorzugt</span>
             <span class="cm-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4 5.3 5.3 0 0 0 3.2.7 2.7 2.7 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c0-.1-.2-.2-.4-.3z"/></svg></span>
-            <div><b>WhatsApp</b><small>Schnell & unkompliziert</small></div>
+            <div><b>WhatsApp</b><small>0152 59367385</small></div>
           </a>
-          <a class="cm" href="mailto:kontakt@DEINE-DOMAIN.de">
+          <a class="cm" href="tel:+4915259367385">
+            <span class="cm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div><b>Anrufen</b><small>0152 59367385</small></div>
+          </a>
+          <a class="cm" href="mailto:juliancwessel@icloud.com">
             <span class="cm-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 5L2 7"/></svg></span>
-            <div><b>E-Mail</b><small>kontakt@DEINE-DOMAIN.de</small></div>
+            <div><b>E-Mail</b><small>juliancwessel@icloud.com</small></div>
           </a>
         </div>
       </div>
@@ -507,7 +482,7 @@ footer a:hover{color:var(--accent-soft)}
         <p>Wir melden uns innerhalb von 24 Stunden mit einem Terminvorschlag.</p>
         <div class="field"><label for="name">Name</label><input id="name" type="text" placeholder="Dein Name"></div>
         <div class="field"><label for="kontaktinfo">E-Mail oder Telefon</label><input id="kontaktinfo" type="text" placeholder="So erreichen wir dich"></div>
-        <div class="field"><label for="fach">Fach & Klassenstufe</label><input id="fach" type="text" placeholder="z. B. Mathe, 11. Klasse"></div>
+        <div class="field"><label for="fach">Fach &amp; Klassenstufe</label><input id="fach" type="text" placeholder="z. B. Mathe, 11. Klasse"></div>
         <div class="field"><label for="nachricht">Nachricht</label><textarea id="nachricht" placeholder="Worum geht's? (optional)"></textarea></div>
         <button class="btn btn-primary" id="sendBtn">Nachricht senden</button>
       </div>
@@ -515,7 +490,6 @@ footer a:hover{color:var(--accent-soft)}
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
 <footer>
   <div class="wrap">
     <div class="foot-grid">
@@ -528,9 +502,8 @@ footer a:hover{color:var(--accent-soft)}
         <p><a href="#ueber">Über uns</a><br><a href="#faecher">Fächer</a><br><a href="#preise">Preise</a><br><a href="#kontakt">Kontakt</a></p>
       </div>
       <div>
-        <!-- PLATZHALTER IMPRESSUM: in Deutschland für geschäftliche Seiten Pflicht (§ 5 DDG). Bitte ausfüllen. -->
         <h5>Impressum</h5>
-        <p>[Vor- und Nachname]<br>[Straße &amp; Hausnummer]<br>[PLZ Ort]<br>E-Mail: kontakt@DEINE-DOMAIN.de<br>Tel.: +49&nbsp;XXX&nbsp;XXXXXXX</p>
+        <p>Julian Wessel<br>Schleißheimer Straße 106<br>80797 München<br>Deutschland<br>E-Mail: juliancwessel@icloud.com<br>Tel.: 0152 59367385</p>
       </div>
     </div>
     <div class="foot-bottom">
@@ -540,8 +513,7 @@ footer a:hover{color:var(--accent-soft)}
   </div>
 </footer>
 
-<!-- Floating WhatsApp -->
-<a class="fab" href="https://wa.me/49XXXXXXXXXX" target="_blank" rel="noopener" aria-label="WhatsApp">
+<a class="fab" href="https://wa.me/4915259367385" target="_blank" rel="noopener" aria-label="WhatsApp">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.3L2 22l4.8-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.9.9-2.7-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8 1-.3.2-.5.1a6.5 6.5 0 0 1-3.2-2.8c-.2-.4.2-.4.6-1.2a.4.4 0 0 0 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.6 4 5.3 5.3 0 0 0 3.2.7 2.7 2.7 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .2-1.2c0-.1-.2-.2-.4-.3z"/></svg>
 </a>
 
@@ -556,7 +528,7 @@ document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(
 document.getElementById('sendBtn').addEventListener('click',()=>{
   const n=name.value,k=kontaktinfo.value,f=fach.value,m=nachricht.value;
   const body=`Name: ${n}%0AKontakt: ${k}%0AFach/Klasse: ${f}%0A%0A${m}`;
-  location.href=`mailto:kontakt@DEINE-DOMAIN.de?subject=Nachhilfe-Anfrage von ${n}&body=${body}`;
+  location.href=`mailto:juliancwessel@icloud.com?subject=Nachhilfe-Anfrage von ${n}&body=${body}`;
 });
 </script>
 </body>
