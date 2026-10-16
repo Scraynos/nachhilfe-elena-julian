@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Elena & Julian · Nachhilfe – von der Mittelstufe bis zum Abitur</title>
-<meta name="description" content="Persönliche Online-Nachhilfe von Medizinstudenten mit 1,0er Abitur & top 0,1% im Medizinertest. Mathematik, Latein, Deutsch & mehr – von der Mittelstufe bis zum Abitur-Leistungskurs.">
+<meta name="description" content="Elena &amp; Julian: 4 Jahre Erfahrung mit persönlicher Online-Nachhilfe bis zum Abitur. Individuelle Aufgabenpakete &amp; Klausurvorbereitung. Sek I: 40 €, Oberstufe: 45 € pro 60 Minuten.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -107,6 +107,9 @@ section{padding:96px 0;position:relative;z-index:1}
 .about-intro{background:var(--bg-warm);border-radius:var(--radius);padding:34px 38px;margin-bottom:34px;border:1px solid var(--line)}
 .about-intro p{font-size:1.15rem;color:var(--ink-soft);max-width:62ch}
 .about-intro strong{color:var(--primary-deep);font-weight:700}
+.about-intro p+p{margin-top:18px}
+.experience-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin:0 0 34px}
+.experience-grid h3{font-size:1.22rem;color:var(--primary-deep);margin-bottom:10px}
 
 #faecher{background:var(--bg-warm)}
 .subj-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -211,7 +214,7 @@ footer a:hover{color:var(--accent-soft)}
 .reveal.in{opacity:1;transform:none}
 
 @media(max-width:900px){
-  .hero-grid,.about-grid,.subj-grid,.steps,.price-cols,.ferien,.quotes,.contact-grid,.stats-grid,.foot-grid{grid-template-columns:1fr}
+  .hero-grid,.about-grid,.experience-grid,.subj-grid,.steps,.price-cols,.ferien,.quotes,.contact-grid,.stats-grid,.foot-grid{grid-template-columns:1fr}
   .stats-grid{grid-template-columns:1fr 1fr;gap:30px}
   .stat:not(:last-child)::after{display:none}
   .subj-grid,.quotes{grid-template-columns:1fr 1fr}
@@ -258,7 +261,7 @@ footer a:hover{color:var(--accent-soft)}
     <div class="hero-text reveal">
       <span class="eyebrow">Online-Nachhilfe · deutschlandweit</span>
       <h1>Nachhilfe, die wirklich <em>etwas bewegt.</em></h1>
-      <p class="lead">Persönlicher Unterricht von zwei Medizinstudenten mit exzellentem Abitur – von der Mittelstufe bis zum Leistungskurs. Strukturiert, geduldig und mit echtem Mehrwert.</p>
+      <p class="lead">Seit vier Jahren begleiten wir Schüler:innen bis zum Abitur. Mit Geduld, einem klaren Plan und ehrlichen Einschätzungen helfen wir, Lücken zu schließen und eigene Ziele zu erreichen.</p>
       <div class="hero-cta">
         <a href="#kontakt" class="btn btn-primary">Kostenloses Kennenlernen</a>
         <a href="#ablauf" class="btn btn-ghost">So läuft's ab</a>
@@ -266,7 +269,7 @@ footer a:hover{color:var(--accent-soft)}
       <div class="chips">
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> 1,0er Abitur</span>
         <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Top 0,1 % Medizinertest</span>
-        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> 4+ Jahre Erfahrung</span>
+        <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 6 9 17l-5-5"/></svg> Begleitung bis zum Abitur</span>
       </div>
     </div>
 
@@ -275,8 +278,8 @@ footer a:hover{color:var(--accent-soft)}
         <img src="images/main.JPG" alt="Elena und Julian – Nachhilfe">
       </div>
       <div class="hero-badge">
-        <div class="big">100%</div>
-        <div class="small">individuell vorbereiteter Unterricht</div>
+        <div class="big">4 Jahre</div>
+        <div class="small">Erfahrung mit persönlicher Nachhilfe</div>
       </div>
       <div class="hero-stamp">Probe&shy;stunde unverbindlich</div>
     </div>
@@ -285,9 +288,9 @@ footer a:hover{color:var(--accent-soft)}
 
 <div class="stats">
   <div class="wrap stats-grid reveal">
-    <div class="stat"><div class="num">1,0</div><div class="lbl">Abiturschnitt</div></div>
+    <div class="stat"><div class="num">4 Jahre</div><div class="lbl">Nachhilfeerfahrung</div></div>
     <div class="stat"><div class="num">0,1 %</div><div class="lbl">Top im Medizinertest</div></div>
-    <div class="stat"><div class="num">4+</div><div class="lbl">Jahre Erfahrung</div></div>
+    <div class="stat"><div class="num">1:1</div><div class="lbl">Individuelle Betreuung</div></div>
     <div class="stat"><div class="num">0&nbsp;€</div><div class="lbl">Kennenlern&shy;gespräch</div></div>
   </div>
 </div>
@@ -300,7 +303,15 @@ footer a:hover{color:var(--accent-soft)}
     </div>
 
     <div class="about-intro reveal">
-      <p>Wir sind <strong>Elena und Julian</strong> – beide Medizinstudenten und seit über <strong>vier Jahren</strong> als Nachhilfelehrer aktiv, davon drei Jahre intensiv. Unser Abitur haben wir mit einem Schnitt von <strong>1,0</strong> und <strong>1,3</strong> abgeschlossen; Julian zusätzlich mit einem Ergebnis unter den <strong>besten 0,1 % im Medizinertest (TMS)</strong>. Genauso wichtig wie gute Noten ist uns aber, dass unsere Schüler:innen den Stoff wirklich verstehen – in einer Atmosphäre, in der jede Frage erlaubt ist.</p>
+      <p>Wir sind <strong>Elena und Julian</strong>, beide Medizinstudenten und seit <strong>vier Jahren</strong> als Nachhilfelehrer aktiv. In dieser Zeit haben wir Schüler:innen über längere Zeit <strong>bis zum Abitur begleitet</strong>, bei gefährdeter Versetzung unterstützt und erlebt, wie sie sich <strong>bis zu den Besten ihrer Klasse</strong> verbessert haben.</p>
+      <p>Jeder Lernweg beginnt woanders. Deshalb schauen wir ehrlich hin: Was sitzt schon, wo fehlen Grundlagen und was ist mit der verfügbaren Zeit realistisch? Daraus entwickeln wir einen individuellen Plan – mit verständlichen Erklärungen, passenden Aufgaben und regelmäßigem Feedback.</p>
+      <p>Unser eigenes Abitur haben wir mit <strong>1,0 und 1,3</strong> abgeschlossen; Julian gehörte außerdem zu den <strong>besten 0,1 % im Medizinertest (TMS)</strong>. Diese Erfahrung geben wir weiter – in einer Atmosphäre, in der jede Frage erlaubt ist.</p>
+    </div>
+
+    <div class="experience-grid">
+      <div class="step reveal"><h3>Bis zum Abitur begleitet</h3><p>Wir haben Schüler:innen über längere Zeit unterstützt und gezielt auf ihre Abiturprüfungen vorbereitet – von den Grundlagen bis zu anspruchsvollen Klausuraufgaben.</p></div>
+      <div class="step reveal"><h3>Bis zu den Besten der Klasse</h3><p>Wir haben erlebt, wie aus Unsicherheit echte Stärke wurde und Schüler:innen zu den Besten ihrer Klasse aufschlossen. Entscheidend waren Verständnis, passende Übungen und kontinuierliche Mitarbeit.</p></div>
+      <div class="step reveal"><h3>Versetzungen gesichert</h3><p>Wir haben Schüler:innen dabei geholfen, eine gefährdete Versetzung zu schaffen. Dafür setzen wir klare Prioritäten und sagen ehrlich, wo sie stehen und welche nächsten Schritte sinnvoll sind.</p></div>
     </div>
 
     <div class="about-grid">
@@ -352,14 +363,14 @@ footer a:hover{color:var(--accent-soft)}
     <div class="sec-head reveal">
       <span class="eyebrow">So arbeiten wir</span>
       <h2>Mehr als nur eine Stunde pro Woche</h2>
-      <p>Guter Unterricht passiert nicht nur während der 60 Minuten. Das gehört bei uns immer dazu:</p>
+      <p>Persönliche Betreuung geht über die 60 Minuten hinaus. Wir verbinden den Unterricht mit passenden Aufgaben, gezielter Vorbereitung und ehrlichem Feedback.</p>
     </div>
     <div class="steps">
-      <div class="step reveal"><div class="n">1</div><h4>Persönliches Kennenlernen</h4><p>Zu Beginn telefonieren wir einmal in Ruhe, um Ziele, Wünsche und den genauen Ablauf zu klären – ganz unverbindlich.</p></div>
-      <div class="step reveal"><div class="n">2</div><h4>Vor- &amp; Nachbereitung</h4><p>Jede Stunde wird sorgfältig vorbereitet und nachbereitet. So sitzt jede Minute und der Stoff baut sinnvoll aufeinander auf.</p></div>
-      <div class="step reveal"><div class="n">3</div><h4>Jederzeit erreichbar</h4><p>Kommt zwischendurch eine Frage auf? Schreibt uns einfach – wir helfen auch außerhalb der Stunden gerne weiter.</p></div>
-      <div class="step reveal"><div class="n">4</div><h4>Korrektur &amp; Kontrolle</h4><p>Wir korrigieren gerne Texte, gehen Übungsaufgaben durch und geben gezieltes Feedback zum aktuellen Thema.</p></div>
-      <div class="step reveal"><div class="n">5</div><h4>Hausaufgaben mit Sinn</h4><p>Passend zum behandelten Stoff geben wir kleine Aufgaben mit – damit das Gelernte wirklich hängen bleibt.</p></div>
+      <div class="step reveal"><div class="n">1</div><h4>Ehrliche Einschätzung &amp; Lernplan</h4><p>Beim kostenlosen Kennenlernen besprechen wir eure Ziele. Im Unterricht schauen wir genau auf den Lernstand, benennen Lücken und legen realistische nächste Schritte fest.</p></div>
+      <div class="step reveal"><div class="n">2</div><h4>Individuelle Aufgabenpakete</h4><p>Zur Vorbereitung und Nachbearbeitung stellen wir passende Aufgaben zusammen. So werden Grundlagen gefestigt, neue Themen vorbereitet und offene Fragen für die nächste Stunde sichtbar.</p></div>
+      <div class="step reveal"><div class="n">3</div><h4>Gezielte Klausurvorbereitung</h4><p>Wir richten die Vorbereitung auf eure Themen, euren Lernstand und den Klausurtermin aus. Gemeinsam üben wir typische Aufgaben, Lösungswege und den Umgang mit der verfügbaren Zeit – bis hin zum Abitur.</p></div>
+      <div class="step reveal"><div class="n">4</div><h4>Korrektur &amp; klares Feedback</h4><p>Wir besprechen Übungsaufgaben, korrigieren Texte und erklären Fehler verständlich. Ihr erfahrt ehrlich, was bereits gut klappt und woran ihr noch arbeiten solltet.</p></div>
+      <div class="step reveal"><div class="n">5</div><h4>Auch zwischen den Stunden</h4><p>Eine Frage beim Üben? Schreibt uns gerne. Wir helfen auch zwischen den Terminen weiter und greifen offene Fragen in der nächsten Stunde gezielt auf.</p></div>
       <div class="step reveal"><div class="n">6</div><h4>Flexibel &amp; ohne Bindung</h4><p>Keine Vertragslaufzeiten, keine versteckten Kosten. Ihr bucht so, wie es zu eurem Alltag passt.</p></div>
     </div>
   </div>
@@ -370,33 +381,24 @@ footer a:hover{color:var(--accent-soft)}
     <div class="sec-head center reveal">
       <span class="eyebrow">Faire, klare Preise</span>
       <h2>Unsere Konditionen</h2>
-      <p>Alle Preise verstehen sich pro 60 Minuten. Nur Online möglich.</p>
+      <p>Persönlicher Online-Einzelunterricht pro 60 Minuten – inklusive individueller Vor- und Nachbereitung, Aufgabenpaketen und gezielter Klausurvorbereitung.</p>
     </div>
     <div class="price-cols">
       <div class="price-card featured reveal">
-        <span class="tag">Beliebt</span>
-        <h3>Einzelunterricht</h3>
-        <div class="price-sub">Volle Aufmerksamkeit – ganz auf dich zugeschnitten.</div>
+        <h3>Sekundarstufe I</h3>
+        <div class="price-sub">Klasse 5–10 · Grundlagen festigen und sicherer werden.</div>
         <div class="price-row">
-          <div class="stufe">Sekundarstufe I<small>Klasse 5 – 10</small></div>
-          <div class="amt">35&nbsp;€<small> / 60 Min</small></div>
-        </div>
-        <div class="price-row">
-          <div class="stufe">Sekundarstufe II<small>Klasse 11 – 13 · inkl. LK</small></div>
+          <div class="stufe">Einzelunterricht<small>Individuelle 1:1-Betreuung</small></div>
           <div class="amt">40&nbsp;€<small> / 60 Min</small></div>
         </div>
       </div>
 
       <div class="price-card reveal">
-        <h3>Gruppenunterricht</h3>
-        <div class="price-sub">Zu zweit lernen – günstiger pro Person. Max. 2 Schüler:innen.</div>
+        <h3>Oberstufe · Sekundarstufe II</h3>
+        <div class="price-sub">Klasse 11–13 · Inklusive Leistungskurs und Abiturvorbereitung.</div>
         <div class="price-row">
-          <div class="stufe">Sekundarstufe I<small>Klasse 5 – 10</small></div>
-          <div style="text-align:right"><div class="amt">40&nbsp;€<small> / 60 Min</small></div><span class="per-person">ab 20 € pro Person</span></div>
-        </div>
-        <div class="price-row">
-          <div class="stufe">Sekundarstufe II<small>Klasse 11 – 13 · inkl. LK</small></div>
-          <div style="text-align:right"><div class="amt">50&nbsp;€<small> / 60 Min</small></div><span class="per-person">ab 25 € pro Person</span></div>
+          <div class="stufe">Einzelunterricht<small>Individuelle 1:1-Betreuung</small></div>
+          <div class="amt">45&nbsp;€<small> / 60 Min</small></div>
         </div>
       </div>
     </div>
